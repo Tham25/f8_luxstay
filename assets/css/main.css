@@ -1,0 +1,39 @@
+
+/* =======Begin: Header ============ */
+.header-wrapper {
+    height: var(--header-height);
+    /* background-color: #ccc; */
+}
+
+
+.header__logo {
+
+}
+
+.header__logo-link {
+    height: var(--header-height);
+    width: var(--header-height);
+    background-color: #f5f5f5;
+    border-radius: 50%;
+}
+
+.header__with-search {
+    width: calc(100% - var(--header-height));
+}
+
+.header__search-input {
+    
+}
+
+.header__date {
+
+}
+
+.header__num-person {
+
+}
+
+.header__search-icon {
+
+}
+/* =======End: Header ============ */

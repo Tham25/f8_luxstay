@@ -1,0 +1,19 @@
+:root {
+    --header-height: 70px;
+}
+
+html {
+    /* HACK - khi do 1rem = 10px nham` de su dung,
+    trong nay sb don vi rem */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
