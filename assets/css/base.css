@@ -1,4 +1,5 @@
 :root {
+    --white-color: #fff;
     --header-height: 70px;
 }
 
@@ -13,7 +14,12 @@ html {
 
 
 .center-flex {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
+}
+
+.mid-height-flex {
+    display: flex;
+    align-items: center;
 }

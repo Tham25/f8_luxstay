@@ -15,10 +15,10 @@
 </head>
 <body>
     <div class="app">
-        <header class="header">
-            <div class="header-wrapper container">
+        <header class="app__header">
+            <div class="container header-wrapper">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 center-flex">
                         <div class="header__logo">
                             <a href="" class="header__logo-link center-flex">
                                 <svg version="1.1" viewBox="0 0 50 50" class="header__logo-img" style="width: 50px; height: 50px;">
@@ -30,20 +30,21 @@
                             </a>
                         </div>
 
-                        <div class="header__with-search">
-                            <div class="header__search-input">
-                                <i class="ti-search"></i>
-                                <input type="text" placeholder="Tìm kiếm">
+                        <div class="header__with-search mid-height-flex">
+                            <div class="header__search-input mid-height-flex">
+                                <i class="header__search-input-icon ti-search"></i>
+                                <input type="text" class="header__search-input-box" placeholder="Tìm kiếm">
                             </div>
                             <div class="header__date">
-                                <i class=""></i>
+                                <i class="fa-regular fa-calendar"></i>
                                 Ngày
                             </div>
-                            <div class="header__num-person">
-    
+                            <div class="header__num-user">
+                                <i class="fa-solid fa-user"></i>
+                                Số khách
                             </div>
-                            <div class="header__search-icon">
-    
+                            <div class="header__search-button">
+                                <i class="ti-search"></i>
                             </div>
                         </div>
                     </div>
@@ -54,11 +55,15 @@
             </div>
         </header>
 
-        <div class="container">
+        <div class="app__slider">
 
         </div>
 
-        <footer class="footer">
+        <div class="app__content">
+
+        </div>
+
+        <footer class="app__footer">
 
         </footer>
     </div>

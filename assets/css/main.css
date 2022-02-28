@@ -1,14 +1,14 @@
 
 /* =======Begin: Header ============ */
+.app__header {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0 4px;
+
+}
 .header-wrapper {
     height: var(--header-height);
-    /* background-color: #ccc; */
 }
 
-
-.header__logo {
-
-}
 
 .header__logo-link {
     height: var(--header-height);
@@ -17,23 +17,44 @@
     border-radius: 50%;
 }
 
+.header__logo-link:hover {
+    fill: #f65e39;
+}
+
 .header__with-search {
+    margin-left: 16px;
+    height: 47px;
     width: calc(100% - var(--header-height));
+    display: flex;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header__search-input {
-    
+    max-width: 300px;
+    height: 100%;
+    flex: 1;
+    padding: 8px 12px;
+}
+
+.header__search-input-icon {
+    font-size: 1.4rem;
+}
+
+.header__search-input-box {
+    padding-left: 4px;
 }
 
 .header__date {
 
 }
 
-.header__num-person {
+.header__num-user {
 
 }
 
-.header__search-icon {
+.header__search-button {
 
 }
 /* =======End: Header ============ */
