@@ -1,6 +1,11 @@
 :root {
-    --white-color: #fff;
     --header-height: 70px;
+    --text-font: 1.4rem;
+
+
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
 }
 
 html {

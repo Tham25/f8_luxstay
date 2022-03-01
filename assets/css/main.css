@@ -2,13 +2,14 @@
 /* =======Begin: Header ============ */
 .app__header {
     border-bottom: 1px solid #ccc;
-    padding: 5px 0 4px;
-
+    padding: 5px 50px 4px 50px;
 }
 .header-wrapper {
+    width: 1300px;
     height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
 }
-
 
 .header__logo-link {
     height: var(--header-height);
@@ -27,34 +28,109 @@
     width: calc(100% - var(--header-height));
     display: flex;
     background-color: var(--white-color);
-    border-radius: 2px;
+    border-radius: 5px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 .header__search-input {
     max-width: 300px;
     height: 100%;
     flex: 1;
-    padding: 8px 12px;
+    padding: 4px 16px;
+    border-radius: 5px;
+}
+
+.header__search-input:focus-within {
+    box-shadow: 1px 0px 2px #dbdbdb;
+    border: 1px solid #dbdbdb;
 }
 
 .header__search-input-icon {
-    font-size: 1.4rem;
+    color: #919191;
 }
 
 .header__search-input-box {
-    padding-left: 4px;
+    padding-left: 12px;
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.6rem;
+}
+/* Google Chrome */
+.header__search-input-box::-webkit-input-placeholder { 
+    color: var( --text-color);
+}
+
+/* internet explorer */
+.header__search-input-box:-ms-input-placeholder {
+    color: var(--black-color);
+}
+
+/* Mozilla Fire */
+.header__search-input-box::-moz-placeholder {
+    color: var(--black-color);
+}
+
+/* Opera */
+.header__search-input-box:-o-input-placeholder {
+    color: var(--black-color);
 }
 
 .header__date {
+    padding: 10px 28px;
+    border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
 
+.header__date-icon {
+    margin-right: 12px;
 }
 
 .header__num-user {
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
+.header__num-user-icon {
+    margin-right: 8px;
 }
 
 .header__search-button {
+    width: 56px;
+    height: 36px;
+    border-radius: 5px;
+    background-color: #555555;
+    margin: 0 8px;
+    cursor: pointer;
+}
 
+.header__search-button > i {
+    color: var(--white-color);
+}
+
+.header__info {
+
+}
+
+.header__info-list {
+    padding-left: 0;
+    list-style: none;
+    height: 100%;
+    margin: 0;
+}
+
+.header__info-item {
+
+}
+
+.header__info-item-link {
+    text-decoration: none;
 }
 /* =======End: Header ============ */
