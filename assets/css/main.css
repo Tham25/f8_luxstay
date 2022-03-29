@@ -3,7 +3,13 @@
 .app__header {
     border-bottom: 1px solid #F2F2F2;
     padding: 5px 50px 4px 50px;
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
+
 .header-wrapper {
     width: 1300px;
     height: var(--header-height);
@@ -115,10 +121,6 @@
     color: var(--white-color);
 }
 
-.header__info {
-
-}
-
 .header__info-list {
     padding-left: 0;
     list-style: none;
@@ -129,7 +131,7 @@
 .header__info-item-link {
     text-decoration: none;
     color: var(--black-color);
-    font-size: var(--text-font);
+    font-size: 1.4rem;
     font-weight: 500;
     padding: 8px 16px;
 }
@@ -157,7 +159,7 @@
 .header__info-select {
     display: flex;
     align-items: center;
-    font-size: var(--text-font);
+    font-size: 1.4rem;
     position: relative;
     padding: 8px 12px 8px 8px;
     background-color: #F6F6F6;
@@ -179,3 +181,74 @@
     right: -4px;
 }
 /* =======End: Header ============ */
+
+/*=============Begin: Slider=========== */
+.app-wrapper {
+    margin-top: calc(44px + var(--header-height));
+}
+
+.app_slider {
+    width: 100%;
+}
+
+.app__slider-link {
+    display: none;
+    width: 100%;
+}
+
+.app__slider-link.active {
+    display: flex;
+}
+
+.app__slider-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.app__content {
+
+}
+/*=============End: Slider=========== */
+
+/*========= Begin welcome=========== */
+.content-welcome {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-welcome__heading {
+    font-size: 2.8rem;
+    margin: 0 0 24px;
+}
+
+.content-welcome__login {
+    margin-top: 6px;
+}
+
+.welcome__login-link {
+    color: var(--text-color);
+}
+
+.welcome__login-link:hover {
+    color: #F76B39;
+}
+/*========= Begin welcome=========== */
+
+/* ===========Begin: Place================ */
+.content-place__list {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.content-place__item {
+    display: block;
+    width: 225px;
+    background-size: cover;
+}
+
+.content-place__img {
+    width: 100%;
+    height: 100%;
+}
+/* ===========Begin: Place================ */
