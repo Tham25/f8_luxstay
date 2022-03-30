@@ -187,17 +187,27 @@
     margin-top: calc(44px + var(--header-height));
 }
 
-.app_slider {
+.app__slider .MS-content {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    /* flex-wrap: nowrap; */
+
+}
+
+.app__slider-item{
     width: 100%;
 }
 
 .app__slider-link {
-    display: none;
+    /* display: none;
     width: 100%;
+    position: absolute;
+    animation: changePosition ease-out 0.5s; */
 }
 
 .app__slider-link.active {
-    display: flex;
+    /* display: flex; */
 }
 
 .app__slider-img {
@@ -206,7 +216,14 @@
 }
 
 .app__content {
+}
 
+@keyframes changePosition {
+    from {
+        left: 100%;
+    } to {
+        left: 0;
+    }
 }
 /*=============End: Slider=========== */
 
