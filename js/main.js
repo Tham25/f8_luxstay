@@ -1,58 +1,38 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+function main() {
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
 
-//Ban dau load trinh duyet se run function start
-function start() {
+    //doi mau button - slider
+    var buttonLeft = $('.MS-left');
+    var buttonRight = $('.MS-right');
+
+    if (buttonRight && buttonLeft) {
+        setInterval(function(){
+            buttonLeft.classList.toggle('active');
+            buttonRight.classList.toggle('active');
+        }, 7000);
+    }
+
+    buttonLeft.onclick = function () {
+        buttonRight.classList.remove('active');
+        buttonLeft.classList.add('active');
+    }
+
+    buttonRight.onclick = function () {
+        buttonLeft.classList.remove('active');
+        buttonRight.classList.add('active');
+    }
+
+
+    //Lay kich thuoc cua app_wrapper - chieu cao = 4/3 chieu rong
+    var contentPlaceImg = $('.content-place__img');
+    var contentPlaceList = $('.content-place__list');
+    contentPlaceList.style.height = 4*(contentPlaceImg.clientWidth)/3 + 'px';
     
-    // listenWindowResize();
+    window.addEventListener('resize', function() {
+        contentPlaceList.style.height = 4*(contentPlaceImg.clientWidth)/3 + 'px';
+    });
+
+
+    //
 }
-
-start();
-
-//slider
-// var slides = $$('.app__slider-link');
-
-// Array.from(slides);
-// var indexCurrentSlide = 0;
-// var indexNewSlide = 0;
-
-// function activeSlide (newSlide) {
-//     newSlide.classList.add('active');
-// }
-
-// function removeSlide(currentSlide) {
-//     currentSlide.classList.remove('active');
-// }
-
-// setInterval(() => {
-//     //sau 1 s thi remove slide active hien tai
-//     removeSlide(slides[indexCurrentSlide])
-//     //sau 1s thi chuyen sang slide khac va active slide
-//     if (indexCurrentSlide === slides.length -1) indexNewSlide = 0;
-//     else indexNewSlide = indexCurrentSlide + 1;
-//     activeSlide(slides[indexNewSlide]);
-//     //active xong thi gan lai
-//     indexCurrentSlide = indexNewSlide;
-//     //
-// }, 3000);
-
-// function listenWindowResize() {
-//     //Tinh margin-top cho app content khi height cua slider thay doi
-//     var appSliderLink = $('.app__slider-link.active');
-//     var appSlider = $('.app__slider');
-
-//     appSlider.style.height = appSliderLink.clientHeight + 'px';
-
-//     window.addEventListener('resize', function(event){
-//         appSlider.style.height = appSliderLink.clientHeight + 'px';
-//     });
-// }
-// Tinh margin-top cho app content khi height cua slider thay doi
-// var appSliderImg = $('.app__slider-img');
-// var appSlider = $('.app__slider');
-
-// appSlider.style.height = appSliderImg.clientHeight + 'px';
-
-// window.addEventListener('resize', function(event){
-//     appSlider.style.height = appSliderImg.clientHeight + 'px';
-// });

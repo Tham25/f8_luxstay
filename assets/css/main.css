@@ -8,6 +8,7 @@
     top: 0;
     right: 0;
     left: 0;
+    z-index: 1;
 }
 
 .header-wrapper {
@@ -25,7 +26,7 @@
 }
 
 .header__logo-link:hover {
-    fill: #f65e39;
+    fill: var(--primary-color);
 }
 
 .header__with-search {
@@ -137,7 +138,7 @@
 }
 
 .header__info-item-link:hover {
-    color: #f65e39;
+    color: var(--primary-color);
 }
 
 .header__infor-tick {
@@ -188,26 +189,49 @@
 }
 
 .app__slider .MS-content {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    /* flex-wrap: nowrap; */
-
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.app__slider-item{
-    width: 100%;
+.app__slider .MS-content .item {
+  display: inline-block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  border-right: none;
+  width: 100%;
 }
 
-.app__slider-link {
-    /* display: none;
-    width: 100%;
+.app__slider .MS-controls {
     position: absolute;
-    animation: changePosition ease-out 0.5s; */
+    display: flex;
+    justify-content: space-between;
+    width: 15px;
+    margin-top: -25px;
+    margin-left: 25px;
 }
 
-.app__slider-link.active {
-    /* display: flex; */
+.app__slider .MS-controls button {
+    border: none;
+    font-size: 30px;
+    outline: 0;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgb(211, 195, 195);
+    box-shadow: none;
+}
+
+.app__slider .MS-controls button:hover {
+    background-color: rgb(129, 122, 122);
+    box-shadow: none;
+}
+
+.app__slider .MS-controls .active {
+    background-color: rgb(129, 122, 122);
+    transition: all 0.5s ease-in;
+    box-shadow: none;
 }
 
 .app__slider-img {
@@ -215,16 +239,14 @@
     border-radius: 20px;
 }
 
-.app__content {
-}
-
-@keyframes changePosition {
+@keyframes changeColor {
     from {
-        left: 100%;
+        opacity: 0;
     } to {
-        left: 0;
+        opacity: 0;
     }
 }
+
 /*=============End: Slider=========== */
 
 /*========= Begin welcome=========== */
@@ -252,20 +274,88 @@
 /*========= Begin welcome=========== */
 
 /* ===========Begin: Place================ */
+/* Dia diem noi bat */
+
 .content-place__list {
-    display: flex;
-    overflow-x: auto;
-    width: 100%;
+    position: relative;
 }
 
 .content-place__item {
-    display: block;
-    width: 225px;
     background-size: cover;
+    padding: 0 8px;
+}
+
+.content-place__item-link {
+    display: block;
+    height: 100%;
+}
+
+.content-place__item-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 8px; */
+    left: 15%;
+    bottom: 10%;
+    color: var(--white-color);
+}
+
+.content-place__hotel {
+    font-size: 1.8rem;
+    /* font-weight: ; */
 }
 
 .content-place__img {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
 }
+
+.content-place__list .MS-content {
+    overflow: hidden;
+    white-space: nowrap;
+    height: 100%;
+}
+  
+.content-place__list .MS-content .item {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    border-right: none;
+    width: 20%;
+}
+
 /* ===========Begin: Place================ */
+
+/* ==================Begin: Content-preferential ==============*/
+/* Ưu đãi đặc biệt */
+.content-preferential__info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-preferential__bonus {
+    font-size: var(--text-font);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.content-preferential__list {
+    display: flex;
+}
+
+.content-preferential__item {
+    display: block;
+    width: 33.33%;
+    padding: 0 8px;
+    border-radius: 5px;
+}
+.content-preferential__item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px rgb(129, 122, 122, 0.5);
+}
+/* ==================Begin:Content-preferential ==============*/
