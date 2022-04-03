@@ -207,17 +207,15 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    width: 15px;
     margin-top: -25px;
-    margin-left: 25px;
+    margin-left: 30px;
 }
 
 .app__slider .MS-controls button {
     border: none;
-    font-size: 30px;
     outline: 0;
     border-radius: 50%;
-    width: 10px;
+    width: 8px;
     height: 10px;
     background: rgb(211, 195, 195);
     box-shadow: none;
@@ -273,60 +271,96 @@
 }
 /*========= Begin welcome=========== */
 
-/* ===========Begin: Place================ */
-/* Dia diem noi bat */
-
-.content-place__list {
+/* ===========Begin: CSs cho list hien thi theo crousel - kiểu băng chuyền================ */
+/* MS-content */
+.wrapper-list {
     position: relative;
 }
 
-.content-place__item {
+.list-item {
+    position: relative;;
     background-size: cover;
     padding: 0 8px;
 }
 
-.content-place__item-link {
-    display: block;
-    height: 100%;
-}
-
-.content-place__item-info {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    /* padding: 0 8px; */
-    left: 15%;
-    bottom: 10%;
-    color: var(--white-color);
-}
-
-.content-place__hotel {
-    font-size: 1.8rem;
-    /* font-weight: ; */
-}
-
-.content-place__img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-}
-
-.content-place__list .MS-content {
+.wrapper-list .MS-content {
     overflow: hidden;
     white-space: nowrap;
     height: 100%;
 }
   
-.content-place__list .MS-content .item {
+.wrapper-list .MS-content .item {
     display: inline-block;
     height: 100%;
     overflow: hidden;
     position: relative;
     vertical-align: top;
     border-right: none;
-    width: 20%;
 }
 
+/* nut control */
+.MS-controls .MS-left, 
+.MS-controls .MS-right {
+    --button-size: 45px;
+    position: absolute;
+    top: 50%;
+    border-radius: 50%;
+    width: var(--button-size);
+    height: var(--button-size);
+    background-color: var(--white-color);
+    border: none;
+    box-shadow: 0 0 2px var(--black-color);
+}
+
+.MS-controls .MS-left:hover:enabled, 
+.MS-controls .MS-right:hover:enabled {
+    box-shadow: 0 0 2px #f65e39;
+    color: #f65e39;
+}
+
+.MS-controls .MS-left {
+    left: -15px;
+}
+
+.MS-controls .MS-right {
+    right: -15px;
+}
+.MS-controls button:disabled {
+    opacity: 0.7;
+}
+
+/* ===========End: CSs cho list hien thi theo crousel - kiểu băng chuyền================ */
+
+/* ===========Begin: Place================ */
+/* dia diem dac biet */
+.content-place__hotel {
+    font-size: 1.8rem;
+}
+
+/* .content-place__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+} */
+
+.wrapper-list img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.content-place__item-info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 15%;
+    bottom: 10%;
+    color: var(--white-color);
+}
+
+.content-place__list .list-item {
+    width: 20%; /*khi muon hien thi bao nhieu item*/
+}
 /* ===========Begin: Place================ */
 
 /* ==================Begin: Content-preferential ==============*/
@@ -352,10 +386,91 @@
     padding: 0 8px;
     border-radius: 5px;
 }
-.content-preferential__item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    box-shadow: 0 2px rgb(129, 122, 122, 0.5);
+/* ==================End:Content-preferential ==============*/
+
+
+/* =============Begin: Goi y tu luxstay===========*/
+.content-recommend__luxstay .list-item {
+    width: 25%; /*khi muon hien thi bao nhieu item*/
 }
-/* ==================Begin:Content-preferential ==============*/
+.content-recommend__luxstay-link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+.content-recommend__luxstay-img {
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    padding-top: 67.3%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.content-recommend__luxstay-heading {
+    text-transform: uppercase;
+    color: #696969;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    margin: 12px 0 8px 0;
+}
+
+.content-recommend__luxstay-descr {
+    display: block;
+    width: 100%;
+    color: #696969;
+    text-decoration: none;
+    line-height: 2.4rem;
+    font-size: var(--text-font);
+    white-space: normal;
+}
+
+.content-recommend__luxstay-descr:hover {
+    color: var(--primary-color);
+}
+
+.content-recommend__luxstay .MS-controls .MS-left, 
+.content-recommend__luxstay .MS-controls .MS-right {
+    top: 30%;
+}
+/* =============Begin: Goi y tu luxstay===========*/
+/* ===========Begin: goi y kham pha */
+.content-recommend__visit .list-item {
+    width: 33.33%;
+}
+
+.content-recommend__visit-info {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    padding: 4px 16px;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.content-recommend__visit-info:hover {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.content-recommend__visit-descr {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 5%;
+    white-space: normal;
+    font-size: 2rem;
+    color: var(--white-color);
+    font-weight: 500;
+    text-shadow: 0 0 2px #555;
+}
+/* ===========End: goi y kham pha */

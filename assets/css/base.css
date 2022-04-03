@@ -6,7 +6,7 @@
 
     --white-color: #fff;
     --black-color: #000;
-    --text-color: #333;
+    --text-color: #40454E;
     --primary-color: #f65e39;
 }
 
@@ -98,37 +98,6 @@ html {
     margin: 0 0 12px;
 }
 
-
-/*=================Begin: button slider =============*/
-/* nut bam */
-
-.MS-controls .MS-left, 
-.MS-controls .MS-right {
-    --button-size: 45px;
-    position: absolute;
-    top: 50%;
-    border-radius: 50%;
-    width: var(--button-size);
-    height: var(--button-size);
-    background-color: var(--white-color);
-    border: none;
-    box-shadow: 0 0 2px var(--black-color);
-}
-
-.MS-controls .MS-left:hover, 
-.MS-controls .MS-right:hover {
-    box-shadow: 0 0 2px #f65e39;
-    color: #f65e39;
-}
-
-.MS-controls .MS-left {
-    left: -8px;
-}
-
-.MS-controls .MS-right {
-    right: -8px;
-}
-/*=================Begin: button slider =============*/
 
 /* ==========Wrapper List=========== */
 .margin-wrapper-list {
