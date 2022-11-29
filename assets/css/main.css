@@ -211,7 +211,7 @@
     margin-left: 30px;
 }
 
-.app__slider .MS-controls button {
+.app__slider .MS-controls .app__slider-sw {
     border: none;
     outline: 0;
     border-radius: 50%;
@@ -221,7 +221,7 @@
     box-shadow: none;
 }
 
-.app__slider .MS-controls button:hover {
+.app__slider .MS-controls .app__slider-sw:hover {
     background-color: rgb(129, 122, 122);
     box-shadow: none;
 }
@@ -291,7 +291,6 @@
   
 .wrapper-list .MS-content .item {
     display: inline-block;
-    height: 100%;
     overflow: hidden;
     position: relative;
     vertical-align: top;
@@ -304,6 +303,7 @@
     --button-size: 45px;
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     border-radius: 50%;
     width: var(--button-size);
     height: var(--button-size);
@@ -325,6 +325,7 @@
 .MS-controls .MS-right {
     right: -15px;
 }
+
 .MS-controls button:disabled {
     opacity: 0.7;
 }
@@ -347,6 +348,7 @@
     width: 100%;
     height: 100%;
     border-radius: 5px;
+    object-fit: cover;
 }
 
 .content-place__item-info {
@@ -358,9 +360,12 @@
     color: var(--white-color);
 }
 
-.content-place__list .list-item {
+.content-place__list .MS-content .list-item {
     width: 20%; /*khi muon hien thi bao nhieu item*/
+    height: 20vw;
+    max-height: 282px;
 }
+
 /* ===========Begin: Place================ */
 
 /* ==================Begin: Content-preferential ==============*/
@@ -438,8 +443,11 @@
 }
 /* =============Begin: Goi y tu luxstay===========*/
 /* ===========Begin: goi y kham pha */
-.content-recommend__visit .list-item {
+.content-recommend__visit .MS-content .list-item,
+.content-guide-user__list .MS-content .list-item {
     width: 33.33%;
+    height: 15vw;
+    max-height: 208px;
 }
 
 .content-recommend__visit-info {
@@ -474,3 +482,153 @@
     text-shadow: 0 0 2px #555;
 }
 /* ===========End: goi y kham pha */
+/*======== Start: Huong dan su dung ===========*/
+.content-guide-user__link {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 5px;
+}
+/*======== End: Huong dan su dung ===========*/
+
+/*======== Start: Luxstay store - appstore ===========*/
+.luxstay-store-logo {
+    width: 340px;
+    margin-bottom: 18px;
+}
+
+.luxstay-store-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.luxstay-store-qr {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 12px;
+}
+
+.luxstay-store-qr-img {
+    width: 100%;
+}
+
+.luxstay-store-app {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.luxstay-store-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.luxstay-store-item img {
+    width: 50%;
+    padding: 8px;
+    padding-bottom: 18px;
+}
+
+/*======== End: Luxstay store - appstore ===========*/
+
+.luxstay-contact-logo {
+    width: 80%;
+}
+
+
+.luxstay-contact-group {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.luxstay-contact-icon {
+   width:40px;
+   height:40px; 
+   border-radius: 50%;
+   background-color: #F7F7F7;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 12px;
+}
+
+.luxstay-contact-icon i {
+    font-size: 30px;
+    color: #4E4E4E;
+}
+
+.luxstay-contact-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.luxstay-contact-link a {
+    padding: 4px 0;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.luxstay-contact-link a:hover {
+    color: var(--primary-color);
+}
+
+.container__luxstay-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__luxstay-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    padding: 5px 0;
+}
+
+.container__luxstay-list a:hover {
+    color: var(--primary-color);
+}
+
+.luxstay-certigication {
+    display: flex;
+
+}
+
+.luxstay-certigication a {
+    display: block;
+    width: 33%;
+    margin-right: 8px;
+}
+
+.luxstay-certigication a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.luxstay-social {
+    text-decoration: none;
+    font-size: 2.8rem;
+    margin-right: 12px;
+}
+.luxstay-social i {
+    color: #484848;
+}
+
+/* =================End: Container============= */
+
+/* =================Start: footer============= */
+.app__footer {
+    padding: 24px 0;
+    width: 100%;
+    font-size: 1.4rem;
+    color: #999;
+    text-align: center;
+    border-top: solid 1px #F2F2F2;
+}
+
+/* =================End: footer============= */
