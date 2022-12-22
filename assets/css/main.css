@@ -17,6 +17,10 @@
     justify-content: space-between;
 }
 
+.header__logo {
+    display: none;
+}
+
 .header__logo-link {
     height: var(--header-height);
     width: var(--header-height);
@@ -255,35 +259,6 @@
   width: 100%;
 }
 
-.app__slider .MS-controls {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    margin-top: -25px;
-    margin-left: 30px;
-}
-
-.app__slider .MS-controls .app__slider-sw {
-    border: none;
-    outline: 0;
-    border-radius: 50%;
-    width: 8px;
-    height: 10px;
-    background: rgb(211, 195, 195);
-    box-shadow: none;
-}
-
-.app__slider .MS-controls .app__slider-sw:hover {
-    background-color: rgb(129, 122, 122);
-    box-shadow: none;
-}
-
-.app__slider .MS-controls .active {
-    background-color: rgb(129, 122, 122);
-    transition: all 0.5s ease-in;
-    box-shadow: none;
-}
-
 .app__slider-img {
     width: 100%;
     border-radius: 20px;
@@ -352,7 +327,7 @@
 /* nut control */
 .MS-controls .MS-left, 
 .MS-controls .MS-right {
-    --button-size: 45px;
+    --button-size: 38px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -371,11 +346,11 @@
 }
 
 .MS-controls .MS-left {
-    left: -15px;
+    left: -8px;
 }
 
 .MS-controls .MS-right {
-    right: -15px;
+    right: -8px;
 }
 
 .MS-controls button:disabled {

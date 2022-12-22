@@ -9,6 +9,10 @@
     .header__info-wrapper-mobile {
         margin-left: 48px;
     }
+
+    .header__logo {
+        display: block;
+    }
 }
 
 /* tablet */
