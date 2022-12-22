@@ -8,6 +8,10 @@
     --black-color: #000;
     --text-color: #40454E;
     --primary-color: #f65e39;
+
+    --number-item-place-list: 2;
+    --number-item-recommend-luxstay: 1;
+    --number-item-recommend-visit: 1;
 }
 
 *{ 
@@ -75,6 +79,15 @@ html {
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 

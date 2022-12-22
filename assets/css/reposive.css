@@ -1,8 +1,44 @@
-/* Tren tablet */
+/* Mobile - tablet */
+@media (min-width: 576px) {
+    :root {
+        --number-item-place-list: 4;
+        --number-item-recommend-luxstay: 3;
+        --number-item-recommend-visit: 2;
+    }
 
+    .header__info-wrapper-mobile {
+        margin-left: 48px;
+    }
+}
 
+/* tablet */
+@media (min-width: 768px) {
+    .header__with-search {
+        display: flex;
+    }
 
+    .header__date {
+        display: block;
+    }
 
+    .header__num-user {
+        display: block;
+    }
+}
 
+/* tren PC */
+@media (min-width: 992px) {
+    .header__info-wrapper-mobile {
+        display: none;
+    }
 
-/* Tren Mobile */
+    .header__info-list-pc {
+        display: flex;
+    }
+
+    :root {
+        --number-item-place-list: 5;
+        --number-item-recommend-luxstay: 3;
+        --number-item-recommend-visit: 3;
+    }
+}

@@ -1,30 +1,15 @@
 const main = (function() {
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
+
+    //===Begin: navbars====//
+    const barsBtn = $('.header__info-bars');
+    barsBtn.onclick = function() {
+        const listInfoMb = $('.header__info-list-mobile');
+        listInfoMb.classList.toggle('show');
+    };
     //====Begin: Slider==============//
-    //doi mau` button - slider
-    var buttonLeft = $('.app__slider .MS-left');
-    var buttonRight = $('.app__slider .MS-right');
-    if (buttonRight && buttonLeft) {
-        setInterval(function(){
-            buttonLeft.classList.toggle('active');
-            buttonRight.classList.toggle('active');
-        }, 7000);
-    }
-
-    buttonLeft.onclick = function () {
-        buttonRight.classList.remove('active');
-        buttonLeft.classList.add('active');
-    }
-
-    buttonRight.onclick = function () {
-        buttonLeft.classList.remove('active');
-        buttonRight.classList.add('active');
-    }
-
     function stateBtnControl (btnCtrLeft, btnCtrRight, numItem, numView) {
-        //lay 2 nut bam control List   
-        //khoi tao vi tri hien thi cua phan tu dau va cuoi mang
         var positionFirst = 0;
         var positionLast;
         
